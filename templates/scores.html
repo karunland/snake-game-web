@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Top Scores
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped" style="width: 250px; margin: auto;">
+    <thead>
+        <tr>
+            <th class="text-end " style="color: #f1fa8c;">User Name</th>
+            <th class="text-start " style="color: #f1fa8c;">Top Scores</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if high_scores is mapping %}
+            {% for username, high_score in high_scores.items()  %}
+            <tr>
+                <td class="text-end " style="color: #f1fa8c;"> {{ username }} </td>
+                <td class="text-start " style="color: #f1fa8c;"> {{ high_score }} </td>
+            </tr>
+            {% endfor %}
+        {% else %}
+            <p>high_scores var is not dict</p>
+        {% endif %}
+        
+    </tbody>
+</table>
+{% endblock %}
