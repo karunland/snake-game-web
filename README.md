@@ -6,5 +6,5 @@
 
 This project my cs50 final project. I used html, css, js, python3 and sqlite for this project. This website has login and logout features to keep track of user's scores. Also website shows you top score of each user in `Scores` page.
 <br><br>
-![mypic](img/website-main.png)
-![alt](img/website-mobile.png)
+![mypic](img/website-main2.png)
+![alt](img/website2.png)
