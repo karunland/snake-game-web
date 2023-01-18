@@ -51,7 +51,6 @@ def get_score():
 @app.route("/scores")
 @login_required
 def scores():
-    user_id = session['user_id']
     data = db.execute('select users.username, scores.score\
                         FROM users\
                         INNER JOIN scores ON users.id=scores.id\
@@ -75,9 +74,6 @@ def scores():
         high_score = max(scores)
         high_scores[username] = high_score
 
-    print(high_scores)
-    for index, key in high_scores.items():
-        print(f'{index} {key}')
     return render_template('scores.html', high_scores=dict(high_scores))
 
 
